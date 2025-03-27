@@ -16,46 +16,100 @@
   <body>
     <header class="w-full">
       <div
-        class="container flex justify-between items-center max-w-[1517px] h-[60px] mx-auto py-4 px-[10px]"
+        class="container flex justify-between items-center max-w-[1517px] h-[60px] mx-auto py-4 px-4 md:px-[10px]"
       >
+        <!-- Logo - متجاوب مع الشاشات الصغيرة -->
         <img
           src="../public/images/Logo.png"
           alt="logo"
-          class="w-[177px] h-[48px]"
+          class="w-[120px] md:w-[177px] h-auto md:h-[48px]"
         />
 
-        <ul class="flex justify-between items-center gap-3 w-[509px] t-[16px]">
+        <!-- قائمة التنقل - تختفي في الجوال -->
+        <ul
+          class="hidden md:flex justify-between items-center gap-6 w-full md:w-[509px]"
+        >
           <li>
             <a
               href="#"
-              class="w-[63px] h-[27px] t-[16px] size-[22px] font-semibold"
+              class="text-[16px] md:text-[18px] font-semibold hover:text-gray-600 transition-colors"
               >Home</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="w-[63px] h-[27px] t-[16px] size-[22px] font-semibold"
+              class="text-[16px] md:text-[18px] font-semibold hover:text-gray-600 transition-colors"
               >Services</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="w-[63px] h-[27px] t-[16px] size-[22px] font-semibold"
+              class="text-[16px] md:text-[18px] font-semibold hover:text-gray-600 transition-colors"
               >Contact</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="w-[63px] h-[27px] t-[16px] size-[22px] font-semibold"
+              class="text-[16px] md:text-[18px] font-semibold hover:text-gray-600 transition-colors"
               >Support</a
             >
           </li>
         </ul>
 
-        <button class="w-[100px] h-[45px] bg-black text-white rounded-[4px]">
+        <!-- زر القائمة للجوال -->
+        <button class="md:hidden text-2xl">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- زر التسجيل - يظهر في جميع الشاشات -->
+        <button
+          class="hidden md:block w-[100px] h-[45px] bg-black text-white rounded-[4px] hover:bg-gray-800 transition-colors"
+        >
+          Sign Up
+        </button>
+      </div>
+
+      <!-- القائمة المنسدلة للجوال -->
+      <div class="md:hidden hidden bg-white w-full py-2 px-4 shadow-md">
+        <a
+          href="#"
+          class="block py-2 text-[16px] font-semibold hover:bg-gray-100 px-2 rounded"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="block py-2 text-[16px] font-semibold hover:bg-gray-100 px-2 rounded"
+          >Services</a
+        >
+        <a
+          href="#"
+          class="block py-2 text-[16px] font-semibold hover:bg-gray-100 px-2 rounded"
+          >Contact</a
+        >
+        <a
+          href="#"
+          class="block py-2 text-[16px] font-semibold hover:bg-gray-100 px-2 rounded"
+          >Support</a
+        >
+        <button
+          class="w-full mt-2 h-[45px] bg-black text-white rounded-[4px] hover:bg-gray-800"
+        >
           Sign Up
         </button>
       </div>
@@ -66,7 +120,7 @@
         class="container flex flex-col justify-between items-start max-w-[1517px] mx-auto py-4 px-[10px]"
       >
         <div
-          class="flex flex-col-reverse sm:flex-row justify-between items-start pb-10"
+          class="flex flex-col sm:flex-row justify-between items-start pb-10"
         >
           <div class="w-4/5 sm:w-[60%]">
             <h1 class="text-[50px] md:text-[65px] lg:text-[85px] font-medium">
@@ -90,30 +144,42 @@
           class="w-full flex flex-col md:flex-row justify-between items-start gap-8"
         >
           <!-- القسم الأول -->
-          <div class="w-full md:w-1/2 order-1">
+          <div class="w-full md:w-2/5 order-1">
             <button
               class="w-[100px] h-[45px] bg-black text-white rounded-[4px] mb-6 sm:mb-10"
             >
               Start Project
             </button>
             <div
-              class="grid grid-cols-1 md:grid-cols-3 gap-3 h-[116px] text-gray-600"
+              class="grid grid-cols-2 md:grid-cols-3 gap-3 h-[116px] text-gray-600"
             >
               <div class="counter-item">
-                <h1 class="font-normal text-[40px] sm:text-[70px]">100+</h1>
-                <p class="font-normal text-[16px] sm:text-[22px]">
+                <h1
+                  class="font-normal text-[30px] md:text-[40px] lg:text-[70px]"
+                >
+                  100+
+                </h1>
+                <p class="font-normal text-[16px] md:text-[18px] lg:-[25px]">
                   Projects Completed
                 </p>
               </div>
               <div class="counter-item">
-                <h1 class="font-normal text-[40px] sm:text-[70px]">100+</h1>
-                <p class="font-normal text-[16px] sm:text-[22px]">
+                <h1
+                  class="font-normal text-[30px] md:text-[40px] lg:text-[70px]"
+                >
+                  100+
+                </h1>
+                <p class="font-normal text-[16px] md:text-[18px] lg:-[25px]">
                   Projects Completed
                 </p>
               </div>
               <div class="counter-item">
-                <h1 class="font-normal text-[40px] sm:text-[70px]">100+</h1>
-                <p class="font-normal text-[16px] sm:text-[22px]">
+                <h1
+                  class="font-normal text-[30px] md:text-[40px] lg:text-[70px]"
+                >
+                  100+
+                </h1>
+                <p class="font-normal text-[16px] md:text-[18px] lg:-[25px]">
                   Projects Completed
                 </p>
               </div>
@@ -122,7 +188,7 @@
 
           <!-- القسم الثاني -->
           <div
-            class="w-full md:w-1/2 relative min-h-[300px] sm:min-h-[470px] order-2 sm:order-3"
+            class="w-full md:w-1/2 relative min-h-[300px] sm:min-h-[470px] order-2 sm:order-3 md:flex hidden"
           >
             <div
               class="sm:absolute border-[3px] border-black border-solid w-[150px] sm:w-[200px] h-[150px] sm:h-[200px] sm:top-[-20px] sm:left-[-30px] mb-4 sm:mb-0"
@@ -130,7 +196,7 @@
             <img
               src="../public/images/Image 2.png"
               alt="hero"
-              class="sm:w-[90%] h-fit sm:absolute block sm:bottom-0 sm:left-0 mt-4 sm:mt-0"
+              class="sm:h-[90%] sm:absolute block sm:bottom-0 sm:left-0 mt-4 sm:mt-0"
             />
             <button
               class="w-[100px] h-[45px] bg-black text-white rounded-[4px] sm:absolute block sm:bottom-0 sm:right-0 mt-4 sm:mt-0 mx-auto sm:mx-0"
@@ -144,22 +210,32 @@
 
     <section class="w-full">
       <div class="container max-w-[1517px] mx-auto py-4 px-[10px]">
-        <div class="title flex flex-row justify-start items-center mb-16">
-          <span class="flex h-1 w-[100px] bg-black mr-6"></span>
-          <h1 class="text-[58px] font-semibold">Our Services</h1>
+        <div
+          class="title flex flex-row justify-start items-center mb-7 md:mb-16"
+        >
+          <span
+            class="flex h-0.5 md:h-1 w-[50px] md:w-[100px] bg-[#1F1F1F] mr-6"
+          ></span>
+          <h1
+            class="text-[20px] sm:text-[38px] md:text-[48px] lg:-[58px] font-semibold text-[#1F1F1F]"
+          >
+            Our Services
+          </h1>
         </div>
         <div class="flex flex-col md:flex-row gap-4">
           <div class="w-full md:w-1/3 flex flex-row gap-4 items-start">
             <img
               src="../public/images/Lighting design icon.png"
               alt="service"
-              class="w-[70px] h-[70px]"
+              class="w-8 sm:w-[70px] h-8 sm:h-[70px]"
             />
             <div class="text">
-              <h1 class="text-[30px] font-semibold font-inter">
+              <h1 class="text-[20px] md:text-[30px] font-semibold font-inter">
                 Interior Design
               </h1>
-              <p class="text-[22px] font-medium font-inter text-gray-600">
+              <p
+                class="text-[14px] md:text-[22px] font-medium font-inter text-gray-600"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 quam velit, vulputate eu pharetra nec, mattis ac neque.
               </p>
@@ -169,13 +245,15 @@
             <img
               src="../public/images/Interior design icon.png"
               alt="service"
-              class="w-[70px] h-[70px]"
+              class="w-8 sm:w-[70px] h-8 sm:h-[70px]"
             />
             <div class="text">
-              <h1 class="text-[30px] font-semibold font-inter">
+              <h1 class="text-[20px] md:text-[30px] font-semibold font-inter">
                 Interior Design
               </h1>
-              <p class="text-[22px] font-medium font-inter text-gray-600">
+              <p
+                class="text-[14px] md:text-[22px] font-medium font-inter text-gray-600"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 quam velit, vulputate eu pharetra nec, mattis ac neque.
               </p>
@@ -185,13 +263,15 @@
             <img
               src="../public/images/Outdoor design icon.png"
               alt="service"
-              class="w-[70px] h-[70px]"
+              class="w-8 sm:w-[70px] h-8 sm:h-[70px]"
             />
             <div class="text">
-              <h1 class="text-[30px] font-semibold font-inter">
+              <h1 class="text-[20px] md:text-[30px] font-semibold font-inter">
                 Interior Design
               </h1>
-              <p class="text-[22px] font-medium font-inter text-gray-600">
+              <p
+                class="text-[14px] md:text-[22px] font-medium font-inter text-gray-600"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 quam velit, vulputate eu pharetra nec, mattis ac neque.
               </p>
@@ -202,43 +282,47 @@
     </section>
 
     <section class="w-full">
-      <div class="container flex justify-between gap-10 mx-auto">
+      <div
+        class="container flex flex-col md:flex-row justify-between gap-6 md:gap-10 mx-auto"
+      >
         <!-- الصورة -->
-        <div class="w-[45%]">
+        <div class="w-full md:w-[45%]">
           <img
             src="../public/images/Mask group.png"
             alt="dream"
-            class="w-full h-full object-cover"
+            class="w-full object-cover"
           />
         </div>
 
         <!-- النص -->
-        <div class="w-[45%] relative">
-          <h3 class="font-semibold text-[58px] text-[rgba(31,31,31,1)] mb-5">
+        <div class="w-full md:w-[45%]">
+          <h3
+            class="font-semibold text-[28px] md:text-[48px] lg:text-[58px] text-[rgba(31,31,31,1)] mb-5"
+          >
             Designing Your Dream With Brilliance
           </h3>
-          <p class="text-[24px] font-medium text-[rgba(84, 84, 84, 1)] mb-10">
+          <p
+            class="text-[14px] md:text-[24px] font-medium text-[rgba(84, 84, 84, 1)] mb-10"
+          >
             Elevate your spaces with bespoke interior designs that reflect your
             unique style and aspirations, crafted with precision and brilliance
             for an unforgettable living experience
           </p>
           <div class="flex flex-col">
             <div class="flex flex-row justify-between items-center">
-              <h4 class="font-semibold text-[24px] my-4">
+              <h4 class="font-semibold text-[16px] md:text-[24px] my-2 md:my-4">
                 Living Room interior Design
               </h4>
-              <img src="/public/images/Group 7.svg" alt="" />
+              <img src="/public/images/Group 7.svg" class="w-4 md:w-8" alt="" />
             </div>
             <div class="flex flex-row justify-between items-center">
-              <h4 class="font-semibold text-[24px] my-4">
+              <h4 class="font-semibold text-[16px] md:text-[24px] my-2 md:my-4">
                 Commercial Office Room Interior Design
               </h4>
-              <img src="/public/images/Group 7.svg" alt="" />
+              <img src="/public/images/Group 7.svg" class="w-4 md:w-8" alt="" />
             </div>
           </div>
-          <button
-            class="w-[100px] h-[45px] bg-black text-white rounded-[4px] absolute bottom-0"
-          >
+          <button class="w-[100px] h-[45px] bg-black text-white rounded-[4px]">
             Learn More
           </button>
         </div>
@@ -246,29 +330,40 @@
     </section>
 
     <section class="w-full">
-      <div class="container flex justify-between items-start w- mx-auto py-4">
-        <div class="w-[45%]">
+      <div
+        class="container flex flex-col md:flex-row justify-between items-start mx-auto py-4 px-4"
+      >
+        <div class="w-full md:w-[45%] mb-8 md:mb-0">
           <h2
-            class="font-semibold text-[58px] text-[#1F1F1F] mb-4 leading-[1.4]"
+            class="font-semibold text-[32px] md:text-[58px] text-[#1F1F1F] mb-4 md:mb-6 leading-[1.4]"
           >
             Desiging Your Dream in Three Simple Steps
           </h2>
           <div class="relative">
-            <div class="flex justify-between items-start gap-8 mb-8">
-              <div class="relative">
+            <!-- Step 1 -->
+            <div
+              class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-8 mb-6 md:mb-8"
+            >
+              <div class="relative order-1 md:order-none">
                 <div
-                  class="w-[72px] h-[72px] bg-black rounded-full outline outline-[18px] outline-white overflow-hidden flex items-center justify-center"
+                  class="w-[60px] md:w-[72px] h-[60px] md:h-[72px] bg-black rounded-full outline outline-[12px] md:outline-[18px] outline-white overflow-hidden flex items-center justify-center"
                 >
                   <img
                     src="/public/images/Step 1 icon.svg"
-                    class="w-[80%] h-[80%] object-contain p-2"
+                    class="w-[80%] h-[80%] object-contain p-1 md:p-2"
                     alt="Step 1"
                   />
                 </div>
               </div>
-              <div class="flex-1">
-                <h3 class="font-bold text-[30px] mb-2">Start Project</h3>
-                <p class="font-normal text-[24px] text-[#545454]">
+              <div
+                class="flex-1 order-2 md:order-none text-center md:text-left"
+              >
+                <h3 class="font-bold text-[20px] md:text-[30px] mb-2">
+                  Start Project
+                </h3>
+                <p
+                  class="font-normal text-[16px] md:text-[24px] text-[#545454]"
+                >
                   Embark on your design adventure by initiating your project.
                   Share your vision and set the stage for a bespoke design
                   experience
@@ -276,42 +371,58 @@
               </div>
             </div>
 
-            <div class="flex justify-between items-start gap-8 mb-8">
-              <div class="relative">
+            <!-- Step 2 -->
+            <div
+              class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-8 mb-6 md:mb-8"
+            >
+              <div class="relative order-1 md:order-none">
                 <div
-                  class="w-[72px] h-[72px] bg-black rounded-full outline outline-[18px] outline-white overflow-hidden flex items-center justify-center"
+                  class="w-[60px] md:w-[72px] h-[60px] md:h-[72px] bg-black rounded-full outline outline-[12px] md:outline-[18px] outline-white overflow-hidden flex items-center justify-center"
                 >
                   <img
                     src="/public/images/carft.svg"
-                    class="w-[80%] h-[80%] object-contain p-2"
-                    alt="Step 1"
+                    class="w-[80%] h-[80%] object-contain p-1 md:p-2"
+                    alt="Craft"
                   />
                 </div>
               </div>
-              <div class="flex-1">
-                <h3 class="font-bold text-[30px] mb-2">Craft</h3>
-                <p class="font-normal text-[24px] text-[#545454]">
+              <div
+                class="flex-1 order-2 md:order-none text-center md:text-left"
+              >
+                <h3 class="font-bold text-[20px] md:text-[30px] mb-2">Craft</h3>
+                <p
+                  class="font-normal text-[16px] md:text-[24px] text-[#545454]"
+                >
                   Collaborate closely to achieve design excellence refining your
                   vision and crafting brilliance into every aspect of your space
                 </p>
               </div>
             </div>
 
-            <div class="flex justify-between items-start gap-8 mb-8">
-              <div class="relative">
+            <!-- Step 3 -->
+            <div
+              class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-8 mb-6 md:mb-8"
+            >
+              <div class="relative order-1 md:order-none">
                 <div
-                  class="w-[72px] h-[72px] bg-black rounded-full outline outline-[18px] outline-white overflow-hidden flex items-center justify-center"
+                  class="w-[60px] md:w-[72px] h-[60px] md:h-[72px] bg-black rounded-full outline outline-[12px] md:outline-[18px] outline-white overflow-hidden flex items-center justify-center"
                 >
                   <img
                     src="/public/images/execute.svg"
-                    class="w-[80%] h-[80%] object-contain p-2"
-                    alt="Step 1"
+                    class="w-[80%] h-[80%] object-contain p-1 md:p-2"
+                    alt="Execute"
                   />
                 </div>
               </div>
-              <div class="flex-1">
-                <h3 class="font-bold text-[30px] mb-2">Execute</h3>
-                <p class="font-normal text-[24px] text-[#545454]">
+              <div
+                class="flex-1 order-2 md:order-none text-center md:text-left"
+              >
+                <h3 class="font-bold text-[20px] md:text-[30px] mb-2">
+                  Execute
+                </h3>
+                <p
+                  class="font-normal text-[16px] md:text-[24px] text-[#545454]"
+                >
                   Witness your vision becoming a reality as we execute the
                   design plan with precision. Celebrate the joy of your newly
                   transformed space
@@ -321,15 +432,15 @@
 
             <!-- Vertical Line -->
             <div
-              class="w-[2px] h-[calc(65%)] bg-gray-500 absolute left-[36px] top-[72px] z-[-1]"
+              class="w-[2px] h-[calc(65%)] bg-gray-500 absolute left-[30px] md:left-[36px] top-[60px] md:top-[72px] z-[-1] hidden md:block"
             ></div>
           </div>
         </div>
-        <div class="w-[45%]">
+        <div class="w-full md:w-[45%]">
           <img
             src="../public/images/Image.png"
             alt="dream"
-            class="w-full h-full object-cover"
+            class="w-full h-auto md:h-full object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>
@@ -643,5 +754,12 @@
         </div>
       </div>
     </footer>
+    <script>
+      // JavaScript بسيط للتحكم في القائمة المنسدلة
+      document.querySelector('.md-hidden button').addEventListener('click', function() {
+        const menu = document.querySelector('.md-hidden div');
+        menu.classList.toggle('hidden');
+    </script>
+    });
   </body>
 </html>
